@@ -11,6 +11,7 @@ class CollectionViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
     let imageCollectionViewCell = ImageCollectionViewCell()
     let productManager = ProductManager()
     override func viewDidLoad() {
