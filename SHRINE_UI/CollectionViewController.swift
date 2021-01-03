@@ -36,9 +36,7 @@ extension CollectionViewController: UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let imageCell = collectionView.dequeueReusableCell(withReuseIdentifier: imageCollectionViewCell.identifier, for: indexPath) as! ImageCollectionViewCell
-        imageCell.imgView.image = UIImage(named: result?.ProductData[indexPath.section].productImage[indexPath.item] ?? "Product0")
-        imageCell.productName.text = result?.ProductData[indexPath.section].productName[indexPath.item]
-        imageCell.productPrice.text = "$\(result?.ProductData[indexPath.section].productPrice[indexPath.item] ?? "100")"
+        imageCell.configurCell(productData: result!, indexPath: indexPath)
         return imageCell
     }
     

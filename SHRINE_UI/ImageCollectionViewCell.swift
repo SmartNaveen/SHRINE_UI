@@ -21,9 +21,12 @@ class ImageCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func configurCell(img: ProductModel) {
-//        imgView.image = img.ProductDat
+    func configurCell(productData:ProductModel ,indexPath:IndexPath) {
 
+        imgView.image = UIImage(named: productData.ProductData[indexPath.section].productImage[indexPath.item])
+        productName.text = productData.ProductData[indexPath.section].productName[indexPath.item]
+        productPrice.text = "$\(productData.ProductData[indexPath.section].productPrice[indexPath.item])"
+        
     }
     
     
